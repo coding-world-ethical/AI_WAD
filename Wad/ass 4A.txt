@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+ <html>
+ <head> 
+<title>Toy Store</title>
+ <!-- jQuery Mobile CSS --> 
+<link rel="stylesheet"
+ href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+ <!-- jQuery -->
+ <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+ <!-- jQuery Mobile JS -->
+ <script
+ src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></sc ript>
+ <style> 
+img {
+ width: 80px;
+ height: 80px;
+ border-radius: 10px;
+ } 
+</style> 
+</head>
+ <body>
+ <!-- HOME PAGE -->
+ <div data-role="page" id="home">
+ <div data-role="header"> 
+<h1> Toy Store</h1>
+ </div> 
+<div role="main" class="ui-content"> 
+<h2>Welcome to Our Toy Store!</h2>
+ <p>Find the best toys for kids </p>
+ <a href="#toys" class="ui-btn ui-btn-b ui-corner-all">View Toys</a> 
+</div> 
+<div data-role="footer">
+ <h4>© Toy Store</h4> 
+</div> 
+</div> <!-- TOYS PAGE --> 
+ <div data-role="page" id="toys"> 
+<div data-role="header"> 
+<h1>Our Toys</h1> 
+<a href="#home" class="ui-btn ui-icon-home ui-btn-icon-notext">Home</a>
+ </div> 
+<div role="main" class="ui-content"> 
+<ul data-role="listview" data-inset="true">
+ <li>
+ <img src="https://images.unsplash.com/photo-1601758123927-196b2e4b63cb">
+ <h2>Panda Toy</h2> 
+<p>Soft Panda Plush</p>
+ </li>
+ <li> <img src="https://images.unsplash.com/photo-1585386959984-a41552231658">
+ <h2>Bike Toy</h2> 
+<p>Mini Racing Bike</p>
+ </li>
+ <li> 
+<img src="https://images.unsplash.com/photo-1615486364924-dcf59d3b0c67">
+ <h2>Doll</h2>
+ <p>Beautiful Doll</p> 
+</li>
+ <li>
+ <img src="https://images.unsplash.com/photo-1580910051074-3eb694886505"> 
+<h2>Car Toy</h2> 
+<p>Sports Car Model</p> 
+</li> 
+<li> 
+<img src="https://images.unsplash.com/photo-1606813909354-6d87d5a9c9d6"> 
+<h2>Teddy Bear</h2> 
+<p>Soft Teddy</p> 
+</li> 
+<li> 
+<img src="https://images.unsplash.com/photo-1596464716127-f2a82984de30"> 
+<h2>Robot Toy</h2>
+ <p>Smart Robot</p>
+ </li> 
+<li> 
+<img src="https://images.unsplash.com/photo-1608136846298-7c1c4fbb9c2d">
+ <h2>Truck Toy</h2> 
+ <p>Heavy Truck</p> 
+</li>
+ <li> 
+<img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485"> 
+<h2>Baby Toy</h2>
+ <p>Colorful Toy</p> 
+</li> 
+<li> <img src="https://images.unsplash.com/photo-1598520106830-8c45c2035460">
+ <h2>Train Toy</h2>
+ <p>Electric Train</p> 
+</li> 
+<li> 
+<img src="https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e">
+ <h2>Blocks</h2>
+ <p>Building Blocks</p>
+ </li> 
+</ul> 
+</div>
+ <div data-role="footer"> 
+<h4>© Toy Store</h4>
+ </div>
+ </div> 
+</body> 
+</html>  
