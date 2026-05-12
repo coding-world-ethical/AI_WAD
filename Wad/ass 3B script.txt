@@ -1,0 +1,61 @@
+const API = "http://localhost:3000";   
+ function addStudent()
+  {  
+       const data = {         
+        name: document.getElementById("name").value,         
+        email: document.getElementById("email").value,         
+        course: document.getElementById("course").value    
+     };      
+     fetch(`${API}/add`,
+         {         
+            method: "POST",        
+             headers: { "Content-Type": "application/json" },
+             body: JSON.stringify(data)    
+             })     
+             .then(res => res.json())    
+              .then(() => {        
+                 alert("Student Added");        
+                  loadStudents();     }); } 
+                   // READ 
+                   function loadStudents() {    
+                    
+                    fetch(`${API}/students`)         
+                    .then(res => res.json())         
+                    .then(data => {             
+                        const list = document.getElementById("list");      
+                               list.innerHTML = "";              
+                               data.forEach(s => {
+                                list.innerHTML += `                  
+                                   <li>                        
+                                    ${s.name} - ${s.email} - ${s.course}   
+                                  <button 
+        onclick="deleteStudent('${s._id}')">Delete
+                     </button>                         
+        <button onclick="updateStudent('${s._id}')">Update
+        </button>                    
+         </li>                 `;            
+         });         });  
+        }  // DELETE
+         function deleteStudent(id) {    
+             fetch(`${API}/delete/${id}`,{
+                
+                 method: "DELETE"   
+                  }).then(() => loadStudents());
+                }
+
+              // UPDATE
+              function updateStudent(id) {     
+                const name = prompt("Enter new name:");     
+                const email = prompt("Enter new email:");    
+                 const course = prompt("Enter new course:");      
+                 fetch(`${API}/update/${id}`, {         
+                    method: "PUT",         
+                    headers: { "Content-Type": "application/json" },     
+                    
+                    body: JSON.stringify({ name, email, course })     
+                }).then(() => loadStudents()); 
+
+
+            }  
+            //load on start
+            loadStudents();
